@@ -176,7 +176,7 @@ body {
     text-decoration: none;
 }
 #menu_mobile_tablet {
-    background-color: red;
+    background-color:var(--azul_claro);
     height: 70px;
     display: none;
     align-items: center;
@@ -186,23 +186,161 @@ body {
     color: var(--branco);
 }
 
+#menu_lateral {
+    background-color: var(--azul_claro);
+    width: 250px;
+    height: 100vh;
+    position: fixed;box-shadow: 2px 0px 20px black;
+    margin-left: -400px;
+    transition: all 0.7s;
+}
+.aparecer {
+    margin-left: 0px !important;
+}
+
+#menu_lateral h1 {
+    font-family: Arial;
+    color: var(--branco);
+    width: 25px;
+    margin-left: 200px;
+}
+
+#menu_lateral .item_menu {
+    color: var(--branco);
+    width: 100px;
+    justify-content: center;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
 /* configuração para smartphones */
-@media sreen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
+    #rodape {
+        flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #coluna1, #coluna2, #coluna3 {
+        width: 90%;
+        height: fit-content;
+        margin-bottom: 8px;
+    }
+    #coluna2 i {
+        margin-left: 0px;
+    }
+    #coluna3 img {
+        display: none;
+    }
+    #secao_02 {
+        flex-direction: column;
+    }
+    #criancas_secao_02 {
+        width: 300px;
+        height: 150px;
+        border-radius: 20px 20px 0px 0px;
+    }
+    #conteudo_secao_02 {
+        width: 300px;
+        border-radius: 0px 0px 20px 20px;
+        padding-bottom: 30px;
+    }
+
+    #criancas_secao_01{
+        margin: auto;
+        height: 200px;
+        width: 300px;
+    }
+
+    #conteudo_secao_01 {
+        width: 300px;
+        padding-left:0px ;
+    }
+    #conteudo_secao_01 h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    #mensagem h1 {
+        font-size: 25px;
+        line-height: 23px;
+
+    }
+    #mensagem p {
+        font-size: 15px;
+        line-height: 13px;
+    }
+    #mensagem {
+        padding: 5px;
+        width: 80%;
+        height: 130px;
+    }
+   
     #menu_mobile_tablet {
         display: flex;
     }
-    #menu_topo {
+    #menu-topo {
         display: none;
     }
 }
 
-/* */
+/* configuração para smatphone*/
 @media screen and (min-width: 481px) and (max-width: 1024px) {
+    #rodape {
+        flex-direction: column;
+    }
+    #coluna1, #coluna2, #coluna3 {
+        width: 80%;
+        height: fit-content;
+        margin-bottom: 50px;
+    }
+    #coluna2 i{
+        margin-left: 0px;
+    }
+    #coluna3 img {
+        display: none;
+    }
+    
+    #secao_01 {
+        flex-direction: column;   /* Deixa os elementos um abaixo do outro */
+    }
+
+    #criancas_secao_02 {
+        width: 450px;
+        height: 250px;
+        border-radius: 40px 40px 0px 0px;
+    }
+   
+    #conteudo_secao_02{
+        width: 450px;
+        border-radius: 0px 0px 40px 40px;
+        padding-bottom: 50px;
+    }
+    
+    #criancas_secao_01{
+        margin: auto;
+    }
+
+    #conteudo_secao_01 {
+        width: 450px;
+    }
+    #secao_02 {
+        flex-direction: column;
+    }
+    
     #menu_mobile_tablet {
         display: flex;
     }
-    #menu_topo {
+    #menu-topo {
         display: none;
     }
 
+}
+#mensagem {
+    padding: 20px;
+    width: 60%;
+}
+#mensagem h1{
+    font-size: 40px;
+}
+#mensagem p {
+    font-size: 25px;
 }
